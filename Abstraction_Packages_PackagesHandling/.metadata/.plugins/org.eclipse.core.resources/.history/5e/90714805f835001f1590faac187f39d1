@@ -1,0 +1,8 @@
+package test2;
+
+import test.Foundation;
+
+public class Solution2 {
+	Foundation foundation = new Foundation();
+	
+}

@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+D:\WiproExcellence\Wipro_Assessments\LanguageBasics\.metadata\.plugins\org.eclipse.jdt.core
+1818320769.index
+2992681277.index
+1865797976.index
+4004030494.index
+458233061.index

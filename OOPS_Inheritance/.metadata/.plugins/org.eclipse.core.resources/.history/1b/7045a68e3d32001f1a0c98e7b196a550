@@ -1,0 +1,48 @@
+// Base class
+class Animal {
+    // Method to simulate eating
+    public void eat() {
+        System.out.println("Animal is eating");
+    }
+
+    // Method to simulate sleeping
+    public void sleep() {
+        System.out.println("Animal is sleeping");
+    }
+}
+
+// Subclass
+class Bird extends Animal {
+    // Override eat method
+    @Override
+    public void eat() {
+        System.out.println("Bird is eating");
+    }
+
+    // Override sleep method
+    @Override
+    public void sleep() {
+        System.out.println("Bird is sleeping");
+    }
+
+    // New method specific to Bird
+    public void fly() {
+        System.out.println("Bird is flying");
+    }
+}
+
+// Main class
+public class First {
+    public static void main(String[] args) {
+        // Creating an instance of Animal
+        Animal animal = new Animal();
+        animal.eat();   // Invoke eat method
+        animal.sleep(); // Invoke sleep method
+
+        // Creating an instance of Bird
+        Bird bird = new Bird();
+        bird.eat();     // Invoke overridden eat method
+        bird.sleep();   // Invoke overridden sleep method
+        bird.fly();     // Invoke fly method
+    }
+}

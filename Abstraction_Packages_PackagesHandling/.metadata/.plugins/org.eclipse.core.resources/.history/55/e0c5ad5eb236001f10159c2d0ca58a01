@@ -1,0 +1,5 @@
+	public InvalidAgeException() {
+		super();
+		System.out.println("Invalid age");
+	}
+}
