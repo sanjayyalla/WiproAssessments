@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2S - Phone Number Validation</title>
+    <script>
+        function validatePhoneNumber() {
+            var phoneNumber = document.forms["phoneForm"]["phoneNumber"].value;
+            var phonePattern = /^(?:\d{3}[-.\s]){2}\d{4}$/;
+            
+            // Validation for Phone Number
+            if (phoneNumber === "") {
+                alert("Phone Number must be entered.");
+                document.forms["phoneForm"]["phoneNumber"].focus();
+                return false;
+            } else if (!phonePattern.test(phoneNumber)) {
+                alert("Phone Number must be in the format XXX-XXX-XXXX, XXX.XXX.XXXX, or XXX XXX XXXX.");
+                document.forms["phoneForm"]["phoneNumber"].focus();
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="phoneForm" onsubmit="return validatePhoneNumber()">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

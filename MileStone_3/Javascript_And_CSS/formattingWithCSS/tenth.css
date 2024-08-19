@@ -1,0 +1,11 @@
+.image-border {
+    border: 30px solid transparent;
+    padding: 20px;
+    background-image: url('border-image.jpg'); 
+    background-repeat: repeat;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-size: cover;
+    text-align: center;
+    font-size: 24px;
+}

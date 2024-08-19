@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3M - Password Validation</title>
+    <script>
+        function validatePassword() {
+            var password = document.forms["passwordForm"]["password"].value;
+            var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+            
+            // Validation for Password
+            if (!passwordPattern.test(password)) {
+                alert("Password must be between 6 to 20 characters and contain at least one numeric digit, one uppercase letter, and one lowercase letter.");
+                document.forms["passwordForm"]["password"].focus();
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="passwordForm" onsubmit="return validatePassword()">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

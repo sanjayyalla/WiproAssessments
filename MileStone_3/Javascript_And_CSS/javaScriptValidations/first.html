@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1M - Form Validation</title>
+    <script>
+        function validateForm() {
+            var memberNumber = document.forms["myForm"]["memberNumber"].value;
+            var password = document.forms["myForm"]["password"].value;
+            
+            // Validation for Member Number
+            if (memberNumber === "") {
+                alert("Member Number must be entered.");
+                document.forms["myForm"]["memberNumber"].focus();
+                return false;
+            } else if (isNaN(memberNumber)) {
+                alert("Member Number must be a number.");
+                document.forms["myForm"]["memberNumber"].focus();
+                return false;
+            }
+            
+            // Validation for Password
+            if (password === "") {
+                alert("Password must be entered.");
+                document.forms["myForm"]["password"].focus();
+                return false;
+            } else if (password.length <= 4) {
+                alert("Password must be longer than 4 characters.");
+                document.forms["myForm"]["password"].focus();
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" onsubmit="return validateForm()">
+        <label for="memberNumber">Member Number:</label>
+        <input type="text" id="memberNumber" name="memberNumber"><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
